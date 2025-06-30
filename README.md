@@ -1,2 +1,2 @@
-# Github by murali
+# Github by mur
 github action examples
