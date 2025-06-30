@@ -1,2 +1,2 @@
-# Workflows
+# Github
 github action examples
