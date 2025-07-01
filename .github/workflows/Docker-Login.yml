@@ -5,14 +5,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: login to dockerhub
-        run: echo"${{ secrets.DOCKER-PASSWORD }}" | docker login -u${{ vars.DOCKER-USERNAME }} --password-stdin
+        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u${{ vars.DOCKER_USERNAME }} --password-stdin
       - name: pull existing image
         run: docker pull nginx:latest
       - name: rename the image
-        run: docker image tag nginx:latest ${{ vars.DOCKER-USERNAME }}/nginx
+        run: docker image tag nginx:latest ${{ vars.DOCKER_USERNAME }}/nginx
       - name: list images
         run: docker image ls
       - name: push image to docker hub
-        run: docker push ${{ vars.DOCKER-USERNAME }}/nginx:latest
+        run: docker push ${{ vars.DOCKER_USERNAME }}/nginx:latest
         
         
